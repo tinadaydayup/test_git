@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>maven-beta</id>
+            <username>vance.ji</username>
+            <password>{kDCa/pmJKoUHuq5giDEwIgFa0EJmTwZTlxeo7h+g3Qg=}</password>
+        </server>
+        <server>
+            <id>maven-stable</id>
+            <username>vance.ji</username>
+            <password>{kDCa/pmJKoUHuq5giDEwIgFa0EJmTwZTlxeo7h+g3Qg=}</password>
+        </server>
+    </servers>
+    <mirrors/>
+    <profiles>
+        <profile>
+            <id>artifactory</id>
+            <repositories>
+                <repository>
+                    <id>maven-stable</id>
+                    <url>https://artifacts-we1.farfetch.net/artifactory/maven-stable</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>maven-beta</id>
+                    <url>https://artifacts-we1.farfetch.net/artifactory/maven-beta</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>artifactory</activeProfile>
+    </activeProfiles>
+</settings>
